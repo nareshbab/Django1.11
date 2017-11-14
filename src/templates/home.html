@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block head_title %} Home || {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+<h1>Hello World</h1>
+<p>Thus us {{html_vars}} coming through</p>
+<p>
+	{% if bool_item %}
+	Random number is {{ num }}
+	{% endif %}
+</p>
+<p>
+	{% for some_item in some_list %}
+		{{ some_item }}<br/>
+	{% endfor %}
+</p>
+<p>Some item is {{ some_item }}</p>
+{% endblock content %}
